@@ -7,7 +7,12 @@
   <title>My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #4f4f4f;
+      background-color: #ffffff;
+    }
+
     .navbar {
       background-color: #828282;
       padding: 20px 20px;
@@ -16,6 +21,7 @@
     .navbar-brand,
     .nav-link {
       color: #ffffff !important;
+      font-weight: 500;
     }
 
     .nav-link:hover {
@@ -39,7 +45,7 @@
     }
 
     .about-section {
-      padding: 80px 0;
+      padding: 60px 0 40px 0;
       background-color: #fff;
     }
 
@@ -47,6 +53,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 15px;
       padding: 25px;
+      background-color: #ffffff;
     }
 
     .about-title {
@@ -54,12 +61,83 @@
       color: #4f4f4f;
     }
 
+    .about-card h4 {
+      font-weight: 600;
+      color: #4f4f4f;
+    }
+
+    .about-card p {
+      font-size: 16px;
+      color: #4f4f4f;
+      line-height: 1.6;
+    }
+
     .profile-pic {
-  width: 300px;
-  height: 300px;
-  border-radius: 20px; 
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      height: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Projects Section */
+    .projects-section {
+      background-color: #ffffff;
+      padding: 40px 0 70px 0;
+      text-align: center;
+    }
+
+    .projects-section h2 {
+      font-weight: 700;
+      color: #4f4f4f;
+      margin-bottom: 40px;
+    }
+
+    .project-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 25px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card img {
+      border-radius: 10px;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .project-card h5 {
+      font-weight: 600;
+      color: #4f4f4f;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      color: #4f4f4f;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .btn-view {
+      background-color: #bca48d;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .btn-view:hover {
+      background-color: #9c856f;
     }
 
     footer {
@@ -67,6 +145,7 @@
       text-align: center;
       padding: 20px;
       color: #4f4f4f;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -86,6 +165,9 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
@@ -100,27 +182,56 @@
 
   <section class="about-section">
     <div class="container text-center">
-      <h2 class="mb-5 about-title">About Me</h2>
+      <h2 class="mb-4 about-title">About Me</h2>
       <div class="row align-items-center justify-content-center">
         <div class="col-md-6">
           <div class="about-card text-start">
             <h4>Who is Sergette?</h4>
-            <p>I’m Sergette Angela N. Napoles, 20 years old, a 3rd-year Bachelor of Science in Information Technology student with a strong passion for creative design and digital media. 
-              Since high school, I’ve been actively joining art and graphic design competitions, which helped me develop my artistic skills. In college, 
-              I became a Social Media Manager in various organizations and gained professional experience working for an outsourcing company handling a client’s social media accounts from California, 
-              where I created graphic designs, managed online platforms, and handled appointments. 
-              Combining my academic knowledge and real world experience, I strive to produce innovative, visually appealing, and meaningful digital content. </p>
+            <p>I’m Sergette Angela N. Napoles, 20 years old, a 3rd-year Bachelor of Science in Information Technology
+              student with a strong passion for creative design and digital media.
+              Since high school, I’ve been actively joining art and graphic design competitions, which helped me develop
+              my artistic skills. In college,
+              I became a Social Media Manager in various organizations and gained professional experience working for an
+              outsourcing company handling a client’s social media accounts from California,
+              where I created graphic designs, managed online platforms, and handled appointments.
+              Combining my academic knowledge and real world experience, I strive to produce innovative, visually
+              appealing, and meaningful digital content.
+            </p>
           </div>
-       </div>
-<div class="col-md-4">
-  <img src="PROFILEgithub.jpg" 
-       alt="Sergette's Picture" 
-       class="profile-pic mt-3 mt-md-0">
-</div>
-</div>
-</div>
-</section>
+        </div>
+        <div class="col-md-4">
+          <img src="PROFILEgithub.jpg" alt="Sergette's Picture" class="profile-pic mt-3 mt-md-0">
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- My Projects Section -->
+  <section class="projects-section">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="row justify-content-center g-4">
+        <!-- Project 1 -->
+        <div class="col-md-4">
+          <div class="project-card">
+            <img src="overview.jpg" alt="MacBook Pro Project">
+            <h5>MacBook Pro</h5>
+            <p>First Website in Web Development</p>
+            <a href="https://sergette66.github.io/Philippines/" target="_blank" class="btn-view">View Project</a>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-4">
+          <div class="project-card">
+            <img src="palawan.jpg" alt="Philippines Project">
+            <h5>Philippines</h5>
+            <p>Second Website in Web Development</p>
+            <a href="https://sergette66.github.io/M5-MacBook/" target="_blank" class="btn-view">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Napoles | All Rights Reserved</p>
@@ -130,4 +241,3 @@
 </body>
 
 </html>
-
