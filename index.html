@@ -7,6 +7,10 @@
   <title>My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       color: #4f4f4f;
@@ -140,6 +144,30 @@
       background-color: #9c856f;
     }
 
+    /* Contact Section */
+    .contact-section {
+      background-color: #f7f7f7;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-weight: 700;
+      color: #4f4f4f;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p,
+    .contact-section a {
+      font-size: 16px;
+      color: #4f4f4f;
+      text-decoration: none;
+    }
+
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       background-color: #f7f7f7;
       text-align: center;
@@ -152,6 +180,7 @@
 
 <body>
 
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand me-4" href="#">My Portfolio</a>
@@ -162,25 +191,27 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
     <h1>Hello, This is Sergette!</h1>
     <p>3rd Year IT Student | Polytechnic University of the Philippines - STC</p>
   </section>
 
-  <section class="about-section">
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
     <div class="container text-center">
       <h2 class="mb-4 about-title">About Me</h2>
       <div class="row align-items-center justify-content-center">
@@ -206,8 +237,8 @@
     </div>
   </section>
 
-  <!-- My Projects Section -->
-  <section class="projects-section">
+  <!-- PROJECTS -->
+  <section class="projects-section" id="projects">
     <div class="container">
       <h2>My Projects</h2>
       <div class="row justify-content-center g-4">
@@ -230,6 +261,16 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:socializewithserg@gmail.com">socializewithserg@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/sergette-angela-napoles-86a210246/" target="_blank">linkedin.com/in/sergette-angela-napoles-86a210246</a></p>
+      <p>GitHub: <a href="https://github.com/Sergette66" target="_blank">github.com/Sergette66</a></p>
     </div>
   </section>
 
